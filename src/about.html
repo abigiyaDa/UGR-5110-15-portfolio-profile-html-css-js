@@ -5,53 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/about.css">
 </head>
 <body>
-    <header>
-        <a href="./index.html">Abigiya.</a>
-        <nav>
-            <ul>
+    <header class="header">
+        <div class="headerLogo">
+            <a class="header-1 blue-colored logo" href="./index.html" aria-label="logo">Abigiya</a> 
+            <li class="hideOnDesktop">
+                <a href="#" role="button" aria-label="Open Sidebar" tabindex="0" 
+                   onclick="showSidebar()" 
+                   onkeydown="if (event.key === 'Enter' || event.key === ' ') showSidebar();">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#0088ff">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                </a>
+            </li>  
+        </div>
+        <nav class="nav">
+            <ul class="sidebar">
+                <li>
+                    <a href="#" role="button" aria-label="Close Sidebar" tabindex="0" 
+                       onclick="hideSidebar()" 
+                       onkeydown="if (event.key === 'Enter' || event.key === ' ') hideSidebar();">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#0088ff">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                        </svg>
+                    </a>
+                </li>                
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./skills.html">Skills</a></li>
                 <li><a href="./hobbies.html">Hobbies</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
+            <ul>
+                <li class="hideOnMobile"><a href="./index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="./about.html">About</a></li>
+                <li class="hideOnMobile"><a href="./skills.html">Skills</a></li>
+                <li class="hideOnMobile"><a href="./hobbies.html">Hobbies</a></li>
+                <li class="hideOnMobile"><a href="./contact.html">Contact</a></li>
+            </ul>
         </nav>
-        <hr>
     </header>
     <main>
-        <section>
-            <h1>Design. Develop. Deliver.</h1>
-            <p>I'm a frontend developer based in Addis Ababa, Ethiopia. Born and raised in this dynamic city, I’ve always been fascinated by technology and its ability to transform the world around us. Currently pursuing a degree in Software Engineering at Addis Ababa University, I am committed to continuously expanding my knowledge and refining my craft. Whether working on personal projects or collaborating with teams, I focus on delivering clean, user-centric designs that drive impactful digital experiences.</p>
-            <div>
-                <img src="./images/download.jpeg" alt="Addis Ababa University" width="300">
-                <img src="./images/addisababa.jpg" alt="Addis Ababa city skyline" width="300">
+        <section class="container-1">
+            <div class="text-container">
+                <h1 class="header-1">Design. Develop. Deliver.</h1>
+                <p>I'm a frontend developer based in Addis Ababa, Ethiopia. Born and raised in this dynamic city, I’ve always been fascinated by technology and its ability to transform the world around us. Currently pursuing a degree in Software Engineering at Addis Ababa University, I am committed to continuously expanding my knowledge and refining my craft. Whether working on personal projects or collaborating with teams, I focus on delivering clean, user-centric designs that drive impactful digital experiences.</p>
+            </div>
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slider-1" src="./images/download.jpeg" alt="Addis Ababa University" >
+                    <img id="slider-2" src="./images/addisababa.jpg" alt="Addis Ababa city skyline" >
+                </div>
+                <div class="slider-nav">
+                    <a href="#slider-1" aria-label="Slide 1: Addis Ababa University"></a>
+                    <a href="#slider-2" aria-label="Slide 2: Addis Ababa city skyline"></a>
+                </div>                
             </div>
         </section>
-        <section>
-            <h1>My Approach to Web Development</h1>
-            <p>With a strong foundation in frontend technologies like HTML, CSS, JavaScript, and modern frameworks, I’m dedicated to bridging the gap between design and functionality. I believe that great web development combines creativity with technical precision, and my goal is to create intuitive, responsive, and visually appealing websites that deliver exceptional user experiences. By staying up-to-date with industry trends and best practices, I aim to develop innovative solutions that help businesses thrive in the digital world. Let’s connect and make your vision a reality!</p>  
-            <figure>
-                <img src="./images/html-css-js.jpg" alt="The logos of HTML, CSS, and JavaScript" width="300">
-                <figcaption>The foundations of web development: HTML, CSS, and JavaScript</figcaption>
-            </figure>
+        <section class="container-2">
+            <div class="text-container">
+                <h1 class="header-1">My Approach to Web Development</h1>
+                <p>With a strong foundation in frontend technologies like HTML, CSS, JavaScript, and modern frameworks, I’m dedicated to bridging the gap between design and functionality. I believe that great web development combines creativity with technical precision, and my goal is to create intuitive, responsive, and visually appealing websites that deliver exceptional user experiences. By staying up-to-date with industry trends and best practices, I aim to develop innovative solutions that help businesses thrive in the digital world. Let’s connect and make your vision a reality!</p> 
+            </div>
+            
+            <div class="figure-container">
+                <figure>
+                    <img src="./images/html-css-js.jpg" alt="The logos of HTML, CSS, and JavaScript">
+                    <figcaption>The foundations of web development: HTML, CSS, and JavaScript</figcaption>
+                </figure>
+            </div>
         </section>
-        <hr>
     </main>
     <footer>
-        <section>
-            <a href="./index.html">Abigiya.</a>
-            <h2>contact me</h2>
+        <section class="footer">
+            <a class="logo" href="./index.html">Abigiya</a>
+            <h2>Contact me</h2>
             <div>
-                <a href="mailto:abigiyada@gmail.com" target="_blank"><i class='bx bx-envelope'></i></a>
-                <a href="tel:+251909540418" target="_blank"><i class='bx bx-phone'></i></a>
-                <a href="https://t.me/Abigiyada" target="_blank"><i class='bx bxl-telegram' ></i></a>
-                <a href="https://github.com/abigiyaDa/" target="_blank"><i class='bx bxl-github' ></i></a>
+                <a href="mailto:abigiyada@gmail.com" target="_blank" aria-label="Email"><i class='bx bx-envelope'></i></a>
+                <a href="https://github.com/abigiyaDa/" target="_blank" aria-label="telephone"><i class='bx bxl-github' ></i></a>
+                <a href="https://t.me/Abigiyada" target="_blank" aria-label="Telegram"><i class='bx bxl-telegram' ></i></a>
+                <a href="tel:+251909540418" target="_blank" aria-label="GitHub"><i class='bx bx-phone'></i></a>
             </div>
             <p>copyright © 2024 Abigiya Daniel. All rights reserved.</p>
         </section>
     </footer>
-    
+    <script src="./js/index.js"></script>
 </body>
 </html>

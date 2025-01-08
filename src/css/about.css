@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:  #09233C;
+}
+.header-1{
+    line-height: 48px;
+    font-weight: bold;
+    font-size: 40px;
+    color: #FBF9F9;
+    padding-bottom: 26px;
+}
+.header .logo {
+    text-decoration: none;
+    color: #0088ff;
+    padding: 0;
+}
+
+.logo:hover{
+    color: hsl(208, 100%, 60%) ;
+}
+.hideOnDesktop{
+    display: none;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    border-bottom: 1px solid #FBF9F9;
+    color: white;
+    padding: 16px 84px 0;
+    gap: 8px;
+}
+.header .nav {
+    align-self: center;
+    padding-bottom: 16px; 
+}
+/* Navigation Styling */
+.header .nav ul {
+    width: 40%;
+    list-style: none;
+    display: flex; /**/
+    align-items: center;
+    gap: 32px; 
+}
+.nav li{
+    height: 50px;
+} 
+.header .nav ul li a {
+    height: 100%;
+    font-size: 18px;
+    border-radius: 22px;
+    text-decoration: none;
+    padding: 10px 32px;
+    background-color: #193248;
+    color: #FBF9F9;
+    display: flex;
+    align-items: center;
+}
+
+/* hover effect */
+.nav ul li a:hover {
+    background-color:hsl(208, 48%, 29%) ;
+}
+
+.header .nav .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* height: 50vh;  */
+    width: 350px;
+    z-index: 999;
+    background-color: #223d544c ; 
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+
+/* main */
+.slider-wrapper {
+    position: relative;
+    max-width: 28rem;
+    overflow: hidden;
+}
+.slider {
+    align-self: flex-start;
+    margin: 0;
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+    min-height: 300px;
+    max-width: 100%;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+.slider::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    width: 100%;
+    height: auto;   
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.0rem;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: #CED0D9;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+.container-1,.container-2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-1 p,.container-2 p{
+    color: #CED0D9;
+    max-width: 624px;
+    line-height: 24px;
+    text-align: left;
+}
+/* option */
+.container-1,.container-2{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #193248;
+    border-radius: 50px;
+    padding: 48px;
+    gap: 48px;/* */
+    max-width: 90%;
+    margin: 80px auto; 
+}
+
+.figure-container img{
+    width: 390px;
+    height: 300px;
+    border-radius: 0.5rem;
+}
+figcaption{
+    width: 390px;
+    padding-top: 16px;
+    color: white ;
+    text-align: center;
+}
+/* Footer Styling */
+footer {
+    background-color: #09233C; /* Footer background color */
+    color: white;
+    padding: 8px 84px;
+    border-top: 2px solid white;
+}
+
+footer section {   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo Styling */
+footer a:first-of-type {
+    text-decoration: none;
+    color: #0086ff;
+    align-self: flex-start; /* Aligns the logo to the left */
+}
+footer h2 {
+    font-size: 32px;
+    line-height: 40px; 
+}
+
+/* Contact Icons */
+footer div {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 8px 0;
+}
+
+footer div a {
+    font-size: 1.5rem;
+    transition: transform 0.3s ;
+    color: #0086ff;
+}
+
+footer div a:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+    color:  hsl(208, 100%, 60%);
+}
+footer div a .bx{
+    width: 47px;
+}
+/* Copyright */
+footer p {
+    font-size: 16px;
+    color: #CED0D9;
+    text-align: center;
+}
+footer .logo{
+    line-height: 48px;
+    font-weight: bold;
+    font-size: 40px;    
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* font */
+    .header-1,footer .logo{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    footer h2 {
+        font-size: 25px;
+        line-height: 30px; 
+    }
+    section{
+        gap: 4px;
+    }
+/* header */
+    .hideOnDesktop{
+        display: block;
+    }
+    .hideOnMobile{
+        display: none;
+    }
+    .header .headerLogo{
+        display: flex;
+        justify-content: space-between;
+    }
+    .header{
+        color: #09233C;
+    }
+    .header .sidebar li{
+        border-bottom: 1px solid #9598A6;
+    }
+    .header .sidebar li:first-child,.header .sidebar li:last-child{
+        border-bottom: 0;
+    }
+    .header .sidebar {
+        border-radius: 22px;
+    }
+    .header .nav ul li a{
+        height: 100%;
+        background-color: transparent;
+    }
+    .header .nav{
+        padding: 0;
+    }
+    /*  */
+    .container-1,.container-2{
+        flex-wrap: wrap;
+    }
+    .slider-wrapper,.figure-container{
+        padding-left: 0px;
+    }
+    .slider-wrapper {
+        align-self: flex-start;
+    }
+    
+    .container-1,.container-2{
+        margin:32px auto ;
+        border-radius: 40px;
+    }
+    .header ,footer{
+        padding: 24px 48px;
+    }
+
+}
+@media (max-width: 600px){
+    .header,footer,.container-1,.container-2{
+        padding: 16px;
+    }
+    .container-1,.container-2{
+        border-radius: 30px;
+        padding: 32px 16px; 
+    }
+    .figure-container img, .figure-container figcaption{
+        width: 100%;
+        height: auto;
+    }
+    .container-1 p,.container-2 p{
+        font-size: 18px;
+        line-height: 150%;
+    }
+    
+}
+
