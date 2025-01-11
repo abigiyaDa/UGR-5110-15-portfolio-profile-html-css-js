@@ -4,67 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobbies</title>
+    <link rel="stylesheet" href="./css/hobbies.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>
-        <a href="./index.html">Abigiya.</a>
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
+    <header class="header">
+        <div class="headerLogo">
+            <a class="header-1 blue-colored logo" href="../index.html" aria-label="logo">Abigiya</a> 
+            <li class="hideOnDesktop">
+                <a href="#" role="button" aria-label="Open Sidebar" tabindex="0" 
+                   onclick="showSidebar()" 
+                   onkeydown="if (event.key === 'Enter' || event.key === ' ') showSidebar();">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#0088ff">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                </a>
+            </li>  
+        </div>
+        
+        <nav class="nav">
+            <ul class="sidebar">
+                <li>
+                    <a href="#" role="button" aria-label="Close Sidebar" tabindex="0" 
+                       onclick="hideSidebar()" 
+                       onkeydown="if (event.key === 'Enter' || event.key === ' ') hideSidebar();">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#0088ff">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                        </svg>
+                    </a>
+                </li>                
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./skills.html">Skills</a></li>
                 <li><a href="./hobbies.html">Hobbies</a></li>
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
+
+
+            <ul>
+                <li class="hideOnMobile"><a href="../index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="./about.html">About</a></li>
+                <li class="hideOnMobile"><a href="./skills.html">Skills</a></li>
+                <li class="hideOnMobile"><a href="./hobbies.html">Hobbies</a></li>
+                <li class="hideOnMobile"><a href="./contact.html">Contact</a></li>
+            </ul>
         </nav>
-        <hr>
     </header>
     <main>
-        <section>
-            <h1>Turning Creativity Into Business: My Journey</h1>
-            <p>I’ve been making friendship bracelets since primary school, and over the years, I've developed more than 10 unique designs that reflect my personal style. In high school, I turned this passion into a small business, selling my creations through my <a href="https://t.me/friendshipbracelets1" target="_blank">Telegram channel</a> and dedicated <a href="https://www.instagram.com/friendshipbracelet094?igsh=ZjVsNGg0dXN2MDFz" target="_blank">Instagram account</a>. This side project has helped me refine my attention to detail, manage an online presence, and engage with a community of customers. It’s a creative outlet that continues to push me to grow and innovate.</p>
-            <div>
-                <img src="./images/Bracelet.jpg" alt="image of a Bracelet" width="300">
-                <img src="./images/bracelet1.jpg" alt="image of a Bracelet" width="300">
-                <img src="./images/bracelet2.jpg" alt="image of a Bracelet" width="300">
-                <img src="./images/Bracelet3.jpg" alt="image of a Bracelet" width="300">
-                <img src="./images/Bracelet4.jpg" alt="image of a Bracelet" width="300">
-                <img src="./images/Bracelet5.jpg" alt="image of a Bracelet" width="300">
-                <img src="./images/Bracelet6.jpg" alt="image of a Bracelet" width="300">
-                <img src="./images/Bracelet7.jpg" alt="image of a Bracelet" width="300">
+        <section class="container-1">
+            <div class="text-container">
+                <h1 class="header-1">Turning Creativity Into Business: My Journey</h1>
+                <p>I’ve been making friendship bracelets since primary school, and over the years, I've developed more than 10 unique designs that reflect my personal style. In high school, I turned this passion into a small business, selling my creations through my <a href="https://t.me/friendshipbracelets1" target="_blank">Telegram channel</a> and dedicated <a href="https://www.instagram.com/friendshipbracelet094?igsh=ZjVsNGg0dXN2MDFz" target="_blank">Instagram account</a>. This side project has helped me refine my attention to detail, manage an online presence, and engage with a community of customers. It’s a creative outlet that continues to push me to grow and innovate.</p>
+            </div>
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slider-1" src="./images/Bracelet.jpg" alt="image of a Bracelet with different color" width="300">
+                    <img id="slider-2" src="./images/bracelet1.jpg" alt="image of a Bracelet with a red zigzag" width="300">
+                    <img id="slider-3" src="./images/bracelet2.jpg" alt="image of two Bracelets with similar design but different color one white and black the other burgundy and black" width="300">
+                    <img id="slider-4" src="./images/Bracelet3.jpg" alt="image of two heart Bracelets " width="300">
+                    <img id="slider-5" src="./images/Bracelet4.jpg" alt="image of two Bracelets with similar desigh" width="300">
+                    <img id="slider-6" src="./images/Bracelet5.jpg" alt="image of a Bracelet" width="300">
+                    <img id="slider-7" src="./images/Bracelet6.jpg" alt="Handcrafted bracelet with v desigh" width="300">
+                    <img id="slider-8" src="./images/Bracelet7.jpg" alt="two handcrafted bracelets" width="300">
+                </div>
+                <div class="slider-nav">
+                    <a href="#slider-1" aria-label="Go to Slide 1"></a>
+                    <a href="#slider-2" aria-label="Go to Slide 2"></a>
+                    <a href="#slider-3" aria-label="Go to Slide 3"></a>
+                    <a href="#slider-4" aria-label="Go to Slide 4"></a>
+                    <a href="#slider-5" aria-label="Go to Slide 5"></a>
+                    <a href="#slider-6" aria-label="Go to Slide 6"></a>
+                    <a href="#slider-7" aria-label="Go to Slide 7"></a>
+                    <a href="#slider-8" aria-label="Go to Slide 8"></a>
+                </div>                
             </div>
         </section>
-        <section>
-            <h1>Enhancing My Skill Set Through Entrepreneurship</h1>
-            <p>Selling my handmade bracelets has been an incredible learning experience, teaching me valuable skills in branding, marketing, and customer service. Promoting designs, managing sales, and interacting with customers have enhanced my communication and organizational abilities. These experiences demonstrate how I combine creativity with technical skills, which I apply in my professional work as a frontend developer. Balancing this entrepreneurial venture with my studies in software engineering has made me more adaptable and resourceful.</p>
-            <div>
-                <video width="300" controls autoplay muted loop>
+        <section class="container-2">
+            <div class="text-container">
+                <h1 class="header-1">Enhancing My Skill Set Through Entrepreneurship</h1>
+                <p>Selling my handmade bracelets has been an incredible learning experience, teaching me valuable skills in branding, marketing, and customer service. Promoting designs, managing sales, and interacting with customers have enhanced my communication and organizational abilities. These experiences demonstrate how I combine creativity with technical skills, which I apply in my professional work as a frontend developer. Balancing this entrepreneurial venture with my studies in software engineering has made me more adaptable and resourceful.</p>
+                <div>  
+                    <audio aria-label="Background music for bracelet showcase" controls muted >
+                        <source src="./audios/video1.mp3" type="audio/mp3">
+                        <source src="./audios/video1.ogg" type="audio/ogg">
+                    </audio>
+                </div>
+            </div>
+            <div class="video-container">
+                <video aria-label="Video showcasing bracelets with background music" controls autoplay muted loop >
                     <source src="./videos/video1.mp4" type="video/mp4">
                     <source src="./videos/video1.webm" type="video/webm">
                 </video>
             </div>
-            <div>  
-                <audio controls muted  >
-                    <source src="./audios/video1.mp3" type="audio/mp3">
-                    <source src="./audios/video1.ogg" type="audio/ogg">
-                </audio>
-            </div>
-            <hr>
         </section>
+        
     </main>
     <footer>
-        <section>
-            <a href="./index.html">Abigiya.</a>
-            <h2>contact me</h2>
+        <section class="footer">
+            <a class="logo" href="../index.html">Abigiya</a>
+            <h2>Contact me</h2>
             <div>
-                <a href="mailto:abigiyada@gmail.com" target="_blank"><i class='bx bx-envelope'></i></a>
-                <a href="tel:+251909540418" target="_blank"><i class='bx bx-phone'></i></a>
-                <a href="https://t.me/Abigiyada" target="_blank"><i class='bx bxl-telegram' ></i></a>
-                <a href="https://github.com/abigiyaDa/" target="_blank"><i class='bx bxl-github' ></i></a>
+                <a href="mailto:abigiyada@gmail.com" target="_blank" aria-label="Email"><i class='bx bx-envelope'></i></a>
+                <a href="https://github.com/abigiyaDa/" target="_blank" aria-label="telephone"><i class='bx bxl-github' ></i></a>
+                <a href="https://t.me/Abigiyada" target="_blank" aria-label="Telegram"><i class='bx bxl-telegram' ></i></a>
+                <a href="tel:+251909540418" target="_blank" aria-label="GitHub"><i class='bx bx-phone'></i></a>
             </div>
             <p>copyright © 2024 Abigiya Daniel. All rights reserved.</p>
         </section>
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 </html>
