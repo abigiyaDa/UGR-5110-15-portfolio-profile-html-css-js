@@ -22,6 +22,7 @@ body {
 .header .logo {
     text-decoration: none;
     color: #0088ff;
+    padding: 0;
 }
 .logo:hover {
     color: hsl(208, 100%, 60%);
@@ -30,6 +31,7 @@ body {
 .header {
     display: flex;
     flex-direction: column;
+    justify-content: center; 
     border-bottom: 1px solid #FBF9F9;
     padding: 16px 84px 0;
     gap: 8px;
@@ -231,16 +233,48 @@ footer .logo {
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
+    .table-container th, .table-container td{
+        padding: 12px 0px;
+        text-align: center;
+    }
+    .header .headerLogo{
+        display: flex;
+        justify-content: space-between;
+    }
     .header-1, footer .logo { font-size: 32px; }
     .hideOnDesktop { display: block; }
     .hideOnMobile { display: none; }
-    .header .nav ul li a { background-color: transparent; }
-    section { flex-direction: column; padding: 10px; }
+    .header .sidebar li:first-child,.header .sidebar li:last-child{
+        border-bottom: 0;
+    }
+    .header .sidebar {
+        border-radius: 22px;
+    }
+    .header .nav ul li a { 
+        background-color: transparent; 
+        height: 100%;
+    }
+    section { 
+        /* flex-direction: column;  */
+        padding: 10px; 
+    }
 }
 @media (max-width: 600px) {
+     
+    .header,footer,.container-1,.container-2{
+        padding: 16px;
+    }
+
     .container, .projects {
         border-radius: 20px;
         padding: 24px;
+        gap: 20px;
     }
     .project-card img { height: 150px; }
+}
+@media (max-width: 490px) {
+    .table-container{
+        /* min-width: 150px; */
+        max-width: 300px;
+     }
 }
